@@ -1,3 +1,7 @@
+# Prod
 pydantic==1.8.2
 fastapi==0.70.0
-locustio==0.999
+uvicorn[standart]==0.15
+
+# Performance Testing Tool
+locust==2.4.0
