@@ -1,0 +1,13 @@
+# Prod
+pydantic==1.8.2
+fastapi==0.70.0
+uvicorn[standart]==0.15
+
+# Performance Testing Tool
+locust==2.4.0
+
+# Dev
+pylint
+black
+isort
+mypy

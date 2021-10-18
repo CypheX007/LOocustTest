@@ -1,6 +1,7 @@
-from locust import HttpUser, task, constant, SequentialTaskSet, tag
-import random
 import logging
+import random
+
+from locust import HttpUser, SequentialTaskSet, constant, tag, task
 
 city_list = []
 
