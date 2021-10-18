@@ -5,3 +5,9 @@ uvicorn[standart]==0.15
 
 # Performance Testing Tool
 locust==2.4.0
+
+# Dev
+pylint
+black
+isort
+mypy
