@@ -4,36 +4,30 @@
 
 Run the test inside the virtual environment.
 
-
-
 ## Installation
 
-##### Locust
 ```bash
-pip install locust
-```
-
-##### Virtual Environment
-```bash
-pip install virtualenv
-virtualenv 'your virtualenv name'
-```
-
-##### FastApi
-
-```bash
-pip install fastapi
-```
-
-##### Pydantic
-
-```bash
-pip install pydantic
+virtualenv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
 ```
 
 ## Usage
 
+### Start API Server
+
 ```bash
-uvicorn 'Your Api File Name':'Your FastApi() name' --reload        #For Start Api
-locust -f 'Your Locust file name'.py        #For Start Locust
+uvicorn src.api:app
+```
+
+### Start Locust Server
+
+```bash
+locust \
+    -f src/locust_example.py \
+    --autostart \
+    --autoquit 3 \
+    --users 10 \
+    --spawn-rate 50 \
+    --run-time 30s
 ```
